@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lib_Datacombs
 {
-    public interface IInteractable
+    interface IItem : IThing, IUsable
     {
-        void OnInteract(Player player);
     }
 }

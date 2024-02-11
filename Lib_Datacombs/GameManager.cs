@@ -14,7 +14,6 @@ namespace Lib_Datacombs
         public Room ROOM { get; set; }
         public string DISPLAY { get; set; }
         public bool RUNNING { get; set; }
-        public List<Command> COMMANDS { get; set; } = new List<Command>();
 
         // Private
         private static GameManager instance = null;
@@ -37,12 +36,12 @@ namespace Lib_Datacombs
             // Booleans
             RUNNING = true;
 
-            // Add all commands
-            COMMANDS.Add(new Quit());
-
             // Test list
-            PLAYER = new Player("Name", "hero");
+            PLAYER = new Player(0, "Name", "hero");
             ROOM = new Room("placeholder");
+
+            // Add starting commands
+            PLAYER.CMDS.Add(new Quit());
         }
         #endregion
 
@@ -66,7 +65,7 @@ namespace Lib_Datacombs
                 }
 
                 // Get command from first token
-                var comlist = from com in COMMANDS
+                var comlist = from com in PLAYER.CMDS
                               where com.KEYS.Contains(tokens.ToArray()[0])
                               select com;
 

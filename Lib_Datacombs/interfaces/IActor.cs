@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lib_Datacombs
 {
-    interface IActor
+    interface IActor : IThing
     {
         void Update();
         void Turn();

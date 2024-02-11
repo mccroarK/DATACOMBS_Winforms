@@ -9,18 +9,21 @@ namespace Lib_Datacombs
     public class Actor : IActor
     {
         #region Properties
-        public string Name { get; set; }
+        public int ID { get; set; }
+        public string NAME { get; set; }
         #endregion
 
         #region Constructors
         public Actor()
         {
-            Name = string.Empty;
+            ID = 0;
+            NAME = string.Empty;
         }
 
-        public Actor(string name)
+        public Actor(int id, string name)
         {
-            Name = name;
+            ID = id;
+            NAME = name;
         }
         #endregion
 

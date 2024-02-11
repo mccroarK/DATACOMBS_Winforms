@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Lib_Datacombs
 {
-    public class Exit
+    interface IPlayer : IActor
     {
-        // Properties
+        List<Item> ITEMS { get; set; }
     }
 }

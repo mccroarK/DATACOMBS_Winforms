@@ -10,17 +10,17 @@ namespace Lib_Datacombs
     public class Room
     {
         #region Properties
-        public Image Image { get; set; }
+        public Image IMG { get; set; }
         #endregion
 
         #region Constructors
         public Room()
         {
-            Image = Image.FromFile(@"..\..\..\Lib_Datacombs\room_images\placeholder.png");
+            IMG = Image.FromFile(@"..\..\..\Lib_Datacombs\room_images\placeholder.png");
         }
         public Room(string image_location)
         {
-            Image = Image.FromFile(@"..\..\..\Lib_Datacombs\room_images\" + image_location + ".png");
+            IMG = Image.FromFile(@"..\..\..\Lib_Datacombs\room_images\" + image_location + ".png");
         }
         #endregion
 

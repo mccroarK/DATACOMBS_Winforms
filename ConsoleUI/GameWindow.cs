@@ -54,11 +54,11 @@ namespace ConsoleUI
             displayLBL.Text = gameManager.DISPLAY;
 
             // Player panel
-            heroPB.Image = gameManager.PLAYER.Image;
-            nameLBL.Text = gameManager.PLAYER.Name;
+            heroPB.Image = gameManager.PLAYER.IMG;
+            nameLBL.Text = gameManager.PLAYER.NAME;
 
             // Room panel
-            roomPB.Image = gameManager.ROOM.Image;
+            roomPB.Image = gameManager.ROOM.IMG;
         }
     }
 }

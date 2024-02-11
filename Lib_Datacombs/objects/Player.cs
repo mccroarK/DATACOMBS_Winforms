@@ -7,20 +7,22 @@ using System.Threading.Tasks;
 
 namespace Lib_Datacombs
 {
-    public class Player : Actor
+    public class Player : Actor, IPlayer
     {
         #region Properties
-        public Image Image { get; set; }
+        public List<Item> ITEMS { get; set; } = new List<Item>();
+        public Image IMG { get; set; }
+        public List<Command> CMDS { get; set; } = new List<Command>();
         #endregion
 
         #region Constructors
         public Player() : base()
         {
-            Image = Image.FromFile(@"..\..\..\Lib_Datacombs\player_images\placeholder.png");
+            IMG = Image.FromFile(@"..\..\..\Lib_Datacombs\player_images\placeholder.png");
         }
-        public Player(string name, string image_location) : base(name)
+        public Player(int id, string name, string image_location) : base(id, name)
         {
-            Image = Image.FromFile(@"..\..\..\Lib_Datacombs\player_images\" + image_location + ".png");
+            IMG = Image.FromFile(@"..\..\..\Lib_Datacombs\player_images\" + image_location + ".png");
         }
         #endregion
 

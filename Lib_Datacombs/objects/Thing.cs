@@ -25,7 +25,5 @@ namespace Lib_Datacombs
             NAME = name;
         }
 
-        // Methods
-        public abstract string Info();
     }
 }

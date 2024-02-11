@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Lib_Datacombs
 {
-    internal interface IQuestion
+    interface IUsable
     {
-        string PROMPT { get; }
-        string ANSWER { get; }
+        void Use();
     }
 }
