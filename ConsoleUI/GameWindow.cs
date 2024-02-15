@@ -23,7 +23,7 @@ namespace ConsoleUI
         private void enterBTN_Click(object sender, EventArgs e)
         {
             // Check game manager properties
-            gameManager.ReadInput(inputTB.Text.ToLower());
+            gameManager.ReadInput(inputTB.Text);
 
             // Update game
             UpdateGame();
@@ -44,11 +44,7 @@ namespace ConsoleUI
         private void UpdateGame()
         {
             // If the player quits the game
-            if (!gameManager.RUNNING)
-            {
-                // Close the app
-                Close();
-            }
+            // Close if setting value for "quit" key is true
 
             // Update display
             displayLBL.Text = gameManager.DISPLAY;

@@ -8,6 +8,7 @@ namespace Lib_Datacombs
 {
     interface IPlayer : IActor
     {
+        string INPUT { get; set; }
         List<Item> ITEMS { get; set; }
     }
 }

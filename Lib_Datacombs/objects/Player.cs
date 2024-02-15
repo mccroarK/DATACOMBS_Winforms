@@ -10,9 +10,10 @@ namespace Lib_Datacombs
     public class Player : Actor, IPlayer
     {
         #region Properties
+        public string INPUT { get; set; }
         public List<Item> ITEMS { get; set; } = new List<Item>();
         public Image IMG { get; set; }
-        public List<Command> CMDS { get; set; } = new List<Command>();
+        public List<Action> CMDS { get; set; } = new List<Action>();
         #endregion
 
         #region Constructors
